@@ -1,1 +1,14 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    
+    --font-primary: "Inter", sans-serif;
+    --font-accent: "PressStart2P", monospace;
+    --card-text-weight: 400;
+    --card-title-weight: 700;
+
+    --section-width: clamp(375px, 50%, 700px);
+
+    --color-primary: #000;
+    --color-background: #fff;
+}
