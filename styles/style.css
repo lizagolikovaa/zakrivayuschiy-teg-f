@@ -4,7 +4,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -22,25 +21,27 @@
   background-position: center;
   background-attachment: fixed;
   min-inline-size: 320px;
+  max-inline-size: 1440px;
   min-block-size: 100dvb;
-  font-family: var(--font-primary);
+  font-family: var(--font-primary), sans-serif;
   font-variation-settings: "wght" var(--card-text-weight);
 }
 
+/* Вернуться позднее и проверить как центрировать при помощи clamp */
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--color-background);
-  font-family: var(--font-accent);
-  border: 2px solid var(--color-primary);
+  font-family: var(--font-accent), monospace;
+  border: var(--section-border);
   min-block-size: 368px;
   margin-block-start: 102px;
 }
 
 .section__width {
-  inline-size: var(--section-width);
+  inline-size: var( --section-width);
 }
 
 .section__font-uppercase {
@@ -54,6 +55,63 @@
 .title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   margin-block-start: 20px;
+}
+
+.post {
+  font-size: var(--font-size-primary);
+  inline-size: var(--section-width);
+}
+
+.post__preparation {
+  margin-block-start: 100px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: var(--section-border);
+  background-color: var(--color-background);
+}
+
+.card__title {
+  grid-row: 1 / 2;
+  font-weight: var(--card-title-weight);
+  padding: 3px 0 3px 10px;
+}
+
+.card__image {
+  grid-row: 2 / 3;
+  min-inline-size: 371px;
+  max-inline-size: 700px;
+  min-block-size: 371px;
+  max-block-size: 700px;
+}
+
+.card__text {
+  grid-row: 3 / 4;
+  padding: 27px 25px;
+}
+
+.card__text-memory {
+  grid-row: 4 / 5;
+  padding: 0 25px 25px 25px;
+}
+
+.card__container-button {
+  grid-row: 5 / 6;
+  justify-self: flex-end;
+  padding: 0 25px 25px 0;
+}
+
+.button {
+  font-family: var(--font-accent), monospace;
+  font-size: var(--font-size-secondary);
+  border: var(--button-border);
+  background-color: var(--color-background);
+}
+
+.card__like-button {
+  padding: 12.5px 37px;
 }
 
 

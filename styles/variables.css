@@ -1,14 +1,21 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-    
-    --font-primary: "Inter", sans-serif;
-    --font-accent: "PressStart2P", monospace;
+    --color-primary: #000;
+    --color-background: #fff;
+
+    --font-primary: "Inter";
+    --font-accent: "PressStart2P";
+    --font-size-primary: 18px;
+    --font-size-secondary: 14px;
     --card-text-weight: 400;
     --card-title-weight: 700;
 
-    --section-width: clamp(375px, 50%, 700px);
+    --section-width: clamp(375px, 50vw, 700px);
+    --section-border: 2px solid var(--color-primary);
 
-    --color-primary: #000;
-    --color-background: #fff;
+    --image-size: clamp(371px, 100%, 696px);
+
+    --button-border: 2px solid var(--color-primary);
+
 }
