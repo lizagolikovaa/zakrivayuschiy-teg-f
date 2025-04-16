@@ -57,6 +57,13 @@
   margin-block-start: 20px;
 }
 
+.main__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .post {
   font-size: var(--font-size-primary);
   inline-size: var(--section-width);
@@ -75,7 +82,8 @@
 
 .card__title {
   grid-row: 1 / 2;
-  font-weight: var(--card-title-weight);
+  font-size: var(--font-size-primary);
+  font-variation-settings: "wght" var(--card-title-weight);
   padding: 3px 0 3px 10px;
 }
 
@@ -85,6 +93,7 @@
   max-inline-size: 700px;
   min-block-size: 371px;
   max-block-size: 700px;
+  margin-inline-start: -2px;
 }
 
 .card__text {
@@ -97,9 +106,11 @@
   padding: 0 25px 25px 25px;
 }
 
-.card__container-button {
+.card__button-container {
   grid-row: 5 / 6;
   justify-self: flex-end;
+  display: flex;
+  align-items: center;
   padding: 0 25px 25px 0;
 }
 
@@ -108,12 +119,35 @@
   font-size: var(--font-size-secondary);
   border: var(--button-border);
   background-color: var(--color-background);
+  padding: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.card__icon-button {
+  background: none; 
+  border: none;
+  margin-inline-end: 12px;
 }
 
 .card__like-button {
   padding: 12.5px 37px;
 }
 
+/* Подумать как выровнять иконку и текст в кнопке */
+
+.button__save {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18.5px 21px 18.5px 19px;
+  margin-block-start: 50px;
+}
+
+.icon__save {
+  inline-size: 21px;
+  block-size: 21px;
+}
 
 
 
