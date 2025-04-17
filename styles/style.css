@@ -80,29 +80,61 @@
   background-color: var(--color-background);
 }
 
+.card:not(:last-child) {
+  margin-block-end: 50px;
+}
+
 .card__title {
   grid-row: 1 / 2;
   font-size: var(--font-size-primary);
   font-variation-settings: "wght" var(--card-title-weight);
-  padding: 3px 0 3px 10px;
+  padding: 3px 24px 3px 10px;
+  max-inline-size: 100%;
 }
 
 .card__image {
   grid-row: 2 / 3;
-  min-inline-size: 371px;
-  max-inline-size: 700px;
-  min-block-size: 371px;
-  max-block-size: 700px;
+  position: relative;
+}
+
+.image {
+  inline-size: 100%;
+  block-size: 100%;
   margin-inline-start: -2px;
+}
+
+/* Посмотреть как сделать через hard-light*/
+.image__label {
+  font-family: var(--font-accent);
+  font-size: var(--font-size-secondary);
+  text-shadow:
+    -1px 0 var(--color-text-stroke), 
+    0 1px var(--color-text-stroke), 
+    1px 0 var(--color-text-stroke), 
+    0 -1px var(--color-text-stroke);
+  opacity: 50%;
+  position: absolute;
+  bottom: calc(100% - 40px);
+  left: calc(100% - 130px);
+}
+
+@supports ((text-stroke: 0.5px #fff) or (-webkit-text-stroke: 0.5px #fff)) {
+  .image__label {
+    -webkit-text-stroke: 0.5px var(--color-text-stroke);
+    text-stroke: 1px var(--color-text-stroke);
+    text-shadow: none;
+  }
 }
 
 .card__text {
   grid-row: 3 / 4;
-  padding: 27px 25px;
+  max-inline-size: 100%;
+  padding: 25px 25px 25px 25px;
 }
 
 .card__text-memory {
   grid-row: 4 / 5;
+  max-inline-size: 100%;
   padding: 0 25px 25px 25px;
 }
 
@@ -111,6 +143,7 @@
   justify-self: flex-end;
   display: flex;
   align-items: center;
+  max-inline-size: 100%;
   padding: 0 25px 25px 0;
 }
 
@@ -163,7 +196,15 @@
 
 @media (max-width: 375px) {
   .section__width {
-    inline-size: 100%;
+    inline-size: 100vw;
   }
-  
+
+  .image {
+    margin: 0;
+  }
+
+  .image__label {
+    bottom: calc(100% - 35px);
+    left: calc(100% - 120px);
+  }
 }
