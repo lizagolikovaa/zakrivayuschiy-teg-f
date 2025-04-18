@@ -230,10 +230,6 @@
     inline-size: 100%;
   }
 
-  .image {
-    margin: 0;
-  }
-
   .image__label {
     bottom: calc(100% - 35px);
     left: calc(100% - 120px);
