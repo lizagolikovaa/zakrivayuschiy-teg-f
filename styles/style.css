@@ -35,13 +35,13 @@
   justify-content: center;
   background-color: var(--color-background);
   font-family: var(--font-accent), monospace;
-  border: var(--section-border);
+  border: 2px solid var(--section-border);
   min-block-size: 368px;
   margin-block-start: 102px;
 }
 
 .section__width {
-  inline-size: var( --section-width);
+  inline-size: var(--section-width);
 }
 
 .section__font-uppercase {
@@ -66,7 +66,6 @@
 
 .post {
   font-size: var(--font-size-primary);
-  inline-size: var(--section-width);
 }
 
 .post__preparation {
@@ -76,7 +75,7 @@
 .card {
   display: grid;
   grid-template-columns: 1fr;
-  border: var(--section-border);
+  border: 2px solid var(--section-border);
   background-color: var(--color-background);
 }
 
@@ -94,13 +93,14 @@
 
 .card__image {
   grid-row: 2 / 3;
+  border-bottom: 2px solid var(--color-primary);
+  border-top: 2px solid var(--color-primary);
   position: relative;
 }
 
 .image {
   inline-size: 100%;
   block-size: 100%;
-  margin-inline-start: -2px;
 }
 
 /* Посмотреть как сделать через hard-light*/
@@ -150,7 +150,7 @@
 .button {
   font-family: var(--font-accent), monospace;
   font-size: var(--font-size-secondary);
-  border: var(--button-border);
+  border: 2px solid var(--button-border);
   background-color: var(--color-background);
   padding: 0;
   box-shadow: none;
@@ -182,21 +182,52 @@
   block-size: 21px;
 }
 
+.popup {
+  font-family: var(--font-accent);
+  max-inline-size: 357px;
+  min-inline-size: 341px;
+  padding: 30px 30px;
+  margin: 0;
+}
 
+.popup[open] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
 
+.popup[open]::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+} 
 
+.popup__title {
+  grid-column: 2 / 3;
+  align-items: center;
+  font-size: var(--font-size-secondary);
+  line-height: 150%;
+  padding-inline-start: 20px;
+}
 
+ .popup .icon__save {
+  grid-column: 1 / 2;
+  align-self: center;
+  inline-size: 39px;
+  block-size: 39px;
+ }
 
+ .popup__button-ok {
+  grid-column: 1 / 3;
+  align-self: flex-end;
+  padding: 12.5px 132.5px;
+  margin-block-start: 30px;
+ }
 
-
-
-
-
-
-
-@media (max-width: 375px) {
+@media (width <= 375px) {
   .section__width {
-    inline-size: 100vw;
+    inline-size: 100%;
   }
 
   .image {

@@ -16,8 +16,8 @@
         <h1 class="logo">&lt;/html&gt;</h1>
         <h2 class="title">закрывающий тег</h2>
     </header>
-    <main class="main__section section__width">
-      <section class="post post__preparation">
+    <main class="main__section">
+      <section class="post post__preparation section__width">
         <article class="card">
           <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
           <div class="card__image">
@@ -36,7 +36,9 @@
           могут повлиять на ваше будущее.</p>
           <p class="card__text-memory">Место для ваших воспоминаний о начале обучения.</p>
           <div class="card__button-container">
-            <button class="button card__icon-button">
+            <button 
+              type="button" 
+              class="button card__icon-button">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="39" 
@@ -87,7 +89,9 @@
             что, если я не справлюсь?</p>
           <p class="card__text-memory">Место для ваших воспоминаний о начале обучения.</p>
           <div class="card__button-container">
-            <button class="button card__icon-button">
+            <button 
+              type="button" 
+              class="button card__icon-button">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="39" 
@@ -113,7 +117,9 @@
                 </defs>
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button 
+              type="button" 
+              class="button card__like-button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -136,7 +142,9 @@
             Или вы, наоборот, могли вдохновиться успехами и поверить в себя.</p>
           <p class="card__text-memory">Место для ваших воспоминаний о начале обучения.</p>
           <div class="card__button-container">
-            <button class="button card__icon-button">
+            <button 
+              type="button" 
+              class="button card__icon-button">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="39" 
@@ -162,7 +170,9 @@
                 </defs>
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button 
+              type="button" 
+              class="button card__like-button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -186,7 +196,9 @@
             и вместо того, чтобы сделать идеально, старались просто сделать.</p>
           <p class="card__text-memory">Место для ваших воспоминаний о начале обучения.</p>
           <div class="card__button-container">
-            <button class="button card__icon-button">
+            <button 
+              type="button" 
+              class="button card__icon-button">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="39" 
@@ -212,7 +224,9 @@
                 </defs>
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button 
+              type="button" 
+              class="button card__like-button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -236,7 +250,9 @@
             Осваивать что-то новое легче, когда рядом есть единомышленники, не правда ли?</p>
           <p class="card__text-memory">Место для ваших воспоминаний о начале обучения.</p>
           <div class="card__button-container">
-            <button class="button card__icon-button">
+            <button 
+              type="button" 
+              class="button card__icon-button">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="39" 
@@ -262,7 +278,9 @@
                 </defs>
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button 
+              type="button" 
+              class="button card__like-button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -285,7 +303,9 @@
             Значит, пришло время посмотреть на задачу под другим углом.</p>
           <p class="card__text-memory">Место для ваших воспоминаний о начале обучения.</p>
           <div class="card__button-container">
-            <button class="button card__icon-button">
+            <button 
+              type="button" 
+              class="button card__icon-button">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="39" 
@@ -335,7 +355,9 @@
             нужна концентрация. Вспомните, откуда вы её черпали.</p>
           <p class="card__text-memory">Место для ваших воспоминаний о начале обучения.</p>
           <div class="card__button-container">
-            <button class="button card__icon-button">
+            <button 
+              type="button" 
+              class="button card__icon-button">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="39" 
@@ -361,7 +383,9 @@
                 </defs>
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button 
+              type="button" 
+              class="button card__like-button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -419,7 +443,11 @@
         </article>
       </section>
       <div>
-        <button class="button button__save">
+        <button 
+          type="button" 
+          onclick="window['popup__save'].showModal()" 
+          aria-controls="popup__save"
+          class="button button__save">
           <svg 
             class="icon__save"
             viewBox="0 0 21 21">
@@ -429,6 +457,22 @@
         </button>
       </div>
     </main>
+    <dialog 
+      id="popup__save"
+      class="popup section__font-uppercase">
+      <svg 
+        class="icon__save"
+        viewBox="0 0 21 21">
+        <use href="#floppy">
+      </svg>
+      <h2 class="popup__title">Вставьте дискету, чтобы продолжить</h2>
+      <button  
+        type="button" 
+        onclick="window['popup__save'].close()"
+        class="button popup__button-ok">
+        <span class="button__text">ОК</span>
+      </button>
+  </dialog> 
     <script src="./scripts/like.js"></script>
   </body>
 </html>
