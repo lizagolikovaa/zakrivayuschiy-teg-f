@@ -177,7 +177,6 @@
   justify-self: flex-end;
   display: flex;
   align-items: center;
-  max-inline-size: 100%;
   padding: 0 25px 25px 0;
 }
 
@@ -195,6 +194,9 @@
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--color-primary);
   transition: box-shadow 0.3s ease;
 }
@@ -220,17 +222,30 @@
   color: var(--color-text-light);
   mix-blend-mode: difference;
   position: relative;
-
 }
 
 .card__icon-button {
   background: none; 
   border: none;
+  inline-size: 39px;
+  block-size: 36px;
+  padding: 0;
   margin-inline-end: 12px;
+  outline: 2px solid transparent;
+  transition: outline 0.3s ease;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--color-primary);
 }
 
 .card__like-button {
-  padding: 12.5px 37px;
+  padding: 11px 37px;
 }
 
 .button__save {
