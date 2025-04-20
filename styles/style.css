@@ -329,7 +329,7 @@
 .card__like-button {
   inline-size: 130px;
   block-size: 39px;
-  padding: 11px 37px;
+  padding: 12.5px 37px;
 }
 
 .button__save {
