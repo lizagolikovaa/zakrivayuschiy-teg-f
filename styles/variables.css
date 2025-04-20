@@ -6,6 +6,11 @@
     --color-text-light: #fff;
     --color-text-stroke: #fff;
 
+    --contour-color: #000;
+    --animation-fill-color: #ff0000;
+    --core-hover-color: #000;
+    --main-body-hover-color: #000;
+
     --font-primary: "Inter";
     --font-accent: "PressStart2P";
     --font-size-primary: 18px;

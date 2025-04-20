@@ -9,8 +9,6 @@
 
 */
 
-
-
 .page {
   display: flex;
   flex-direction: column;
@@ -19,6 +17,7 @@
   repeating-linear-gradient(to bottom, rgb(211, 211, 211), rgb(211, 211, 211) 2px, transparent 2px, transparent 4px),
   linear-gradient(to bottom, rgb(231 231 231), rgb(231 231 231) 0.01%, rgb(26 26 26) 100%);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -94,12 +93,14 @@
 
 .card__image {
   grid-row: 2 / 3;
+  display: grid;
   border-bottom: 2px solid var(--color-primary);
   border-top: 2px solid var(--color-primary);
-  position: relative;
 }
 
 .image {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -138,6 +139,9 @@
 
 /* Посмотреть как сделать через hard-light*/
 .image__label {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  justify-self: flex-end;
   font-family: var(--font-accent);
   font-size: var(--font-size-secondary);
   text-shadow:
@@ -146,10 +150,7 @@
     1px 0 var(--color-text-stroke), 
     0 -1px var(--color-text-stroke);
   opacity: 50%;
-  position: absolute;
-  /* Вернуться и подумать можно ли красивее сделать */
-  bottom: calc(100% - 40px);
-  right: calc(100% - 665px);
+  padding: 25px 25px 0 0;
 }
 
 @supports ((text-stroke: 0.5px #fff) or (-webkit-text-stroke: 0.5px #fff)) {
@@ -244,6 +245,36 @@
   outline: 2px solid var(--color-primary);
 }
 
+.card__icon-button .like-icon .heart .core {
+  fill: transparent; 
+  transition-property: fill;
+  transition-duration: 0.3s;
+  transition-delay: 0.03s;
+}
+
+.card__icon-button:hover .like-icon .heart .core {
+  fill: #000;
+  transition-property: fill;
+  transition-duration: 0.3s;
+}
+
+.card__icon-button .like-icon .heart .main-body {
+  fill: transparent; 
+  transition-property: fill;
+  transition-duration: 0.3s;
+}
+
+.card__icon-button:hover .like-icon .heart .main-body {
+  fill: #000;
+  transition-property: fill;
+  transition-duration: 0.3s;
+  transition-delay: 0.05s;
+}
+
+.sparks {
+  opacity: 0%;
+}
+
 .card__like-button {
   padding: 11px 37px;
 }
@@ -311,7 +342,6 @@
   }
 
   .image__label {
-    bottom: calc(100% - 35px);
-    left: calc(100% - 120px);
+    padding: 25px 13px 0 0;
   }
 }
