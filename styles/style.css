@@ -189,6 +189,38 @@
   padding: 0;
   box-shadow: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--color-primary);
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button__text {
+  color: var(--color-text-light);
+  mix-blend-mode: difference;
+  position: relative;
+
 }
 
 .card__icon-button {
@@ -201,8 +233,6 @@
   padding: 12.5px 37px;
 }
 
-/* Подумать как выровнять иконку и текст в кнопке */
-
 .button__save {
   display: flex;
   align-items: center;
@@ -214,6 +244,7 @@
 .icon__save {
   inline-size: 21px;
   block-size: 21px;
+  mix-blend-mode: difference;
 }
 
 .popup {
