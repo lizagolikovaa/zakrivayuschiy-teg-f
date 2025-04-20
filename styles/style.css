@@ -15,8 +15,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(/images/background.png);
-  background-repeat: no-repeat;
+  background-image: repeating-linear-gradient(to right, rgb(211, 211, 211), rgb(211, 211, 211) 2px, transparent 2px, transparent 4px),
+  repeating-linear-gradient(to bottom, rgb(211, 211, 211), rgb(211, 211, 211) 2px, transparent 2px, transparent 4px),
+  linear-gradient(to bottom, rgb(231 231 231), rgb(231 231 231) 0.01%, rgb(26 26 26) 100%);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -103,6 +104,38 @@
   block-size: 100%;
 }
 
+.image-excitement {
+  filter: brightness(200%);
+}
+
+.image-determination {
+  filter: contrast(200%);
+}
+
+.image-panic {
+  filter: blur(0.2rem);
+}
+
+.image-acceptance {
+  filter: sepia(50%);
+}
+
+.image-opennes {
+  filter: opacity(70%);
+}
+
+.image-annoyance {
+  filter: saturate(180%) hue-rotate(45deg);
+}
+
+.image-lethargy {
+  filter: grayscale(100%);
+}
+
+.image-stubbornness {
+  filter: brightness(150%) contrast(150%);
+}
+
 /* Посмотреть как сделать через hard-light*/
 .image__label {
   font-family: var(--font-accent);
@@ -114,8 +147,9 @@
     0 -1px var(--color-text-stroke);
   opacity: 50%;
   position: absolute;
+  /* Вернуться и подумать можно ли красивее сделать */
   bottom: calc(100% - 40px);
-  left: calc(100% - 130px);
+  right: calc(100% - 665px);
 }
 
 @supports ((text-stroke: 0.5px #fff) or (-webkit-text-stroke: 0.5px #fff)) {
