@@ -10,6 +10,8 @@
     --animation-fill-color: #ff0000;
     --core-hover-color: #000;
     --main-body-hover-color: #000;
+    --core-active-color: #ff0000;
+    --main-body-active-color: #ff0000;
 
     --font-primary: "Inter";
     --font-accent: "PressStart2P";
