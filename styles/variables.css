@@ -1,17 +1,25 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-    --color-primary: #000;
-    --color-background: #fff;
-    --color-text-light: #fff;
-    --color-text-stroke: #fff;
+    --black: #000;
+    --white: #fff;
+    --red: #ff0000;
 
-    --contour-color: #000;
-    --animation-fill-color: #ff0000;
-    --core-hover-color: #000;
-    --main-body-hover-color: #000;
-    --core-active-color: #ff0000;
-    --main-body-active-color: #ff0000;
+    --accent-color: var(--black);
+    --background-color: var(--white);
+    --text-light-color: var(--white);
+    --text-stroke-color: var(--white);
+
+    --heart-hover-color: var(--black);
+    --heart-active-color: var(--red);
+    --heart-isliked-color: var(--red);
+
+    --contour-color: var(--black);
+    --animation-fill-color: var(--red);
+    --core-hover-color: var(--black);
+    --main-body-hover-color: var(--black);
+    --core-active-color: var(--red);
+    --main-body-active-color: var(--red);
 
     --font-primary: "Inter";
     --font-accent: "PressStart2P";
@@ -21,10 +29,6 @@
     --card-title-weight: 700;
 
     --section-width: clamp(375px, 100%, 700px);
-    --section-border: var(--color-primary);
-
     --image-size: clamp(371px, 100%, 696px);
-
-    --button-border: var(--color-primary);
 
 }

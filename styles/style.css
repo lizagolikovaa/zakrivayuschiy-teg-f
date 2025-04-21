@@ -50,11 +50,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-background);
   font-family: var(--font-accent), monospace;
   border: 2px solid var(--section-border);
   min-block-size: 368px;
   margin-block-start: 102px;
+}
+
+.background-light {
+  background-color: var(--background-color);
 }
 
 .section__width {
@@ -92,8 +95,7 @@
 .card {
   display: grid;
   grid-template-columns: 1fr;
-  border: 2px solid var(--section-border);
-  background-color: var(--color-background);
+  border: 2px solid var(--accent-color);
 }
 
 .card:not(:last-child) {
@@ -111,8 +113,8 @@
 .card__image {
   grid-row: 2 / 3;
   display: grid;
-  border-bottom: 2px solid var(--color-primary);
-  border-top: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--accent-color);
+  border-top: 2px solid var(--accent-color);
 }
 
 .image {
@@ -161,10 +163,10 @@
   font-family: var(--font-accent);
   font-size: var(--font-size-secondary);
   text-shadow:
-    -1px 0 var(--color-text-stroke), 
-    0 1px var(--color-text-stroke), 
-    1px 0 var(--color-text-stroke), 
-    0 -1px var(--color-text-stroke);
+    -1px 0 var(--text-stroke-color), 
+    0 1px var(--text-stroke-color), 
+    1px 0 var(--text-stroke-color), 
+    0 -1px var(--text-stroke-color);
   opacity: 50%;
   mix-blend-mode: hard-light;
   padding: 25px 25px 0 0;
@@ -172,8 +174,8 @@
 
 @supports ((text-stroke: 0.5px #fff) or (-webkit-text-stroke: 0.5px #fff)) {
   .image__label {
-    -webkit-text-stroke: 0.5px var(--color-text-stroke);
-    text-stroke: 1px var(--color-text-stroke);
+    -webkit-text-stroke: 0.5px var(--text-stroke-color);
+    text-stroke: 1px var(--text-stroke-color);
     text-shadow: none;
   }
 }
@@ -202,8 +204,7 @@
   font-family: var(--font-accent), monospace;
   font-size: var(--font-size-secondary);
   line-height: 90%;
-  border: 2px solid var(--button-border);
-  background-color: var(--color-background);
+  border: 2px solid var(--accent-color);
   padding: 0;
   box-shadow: none;
   cursor: pointer;
@@ -216,18 +217,20 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 var(--color-primary);
+  box-shadow: 2px 2px 0 var(--accent-color);
   transition: box-shadow 0.3s ease;
 }
 
 .button::before {
+  --background-color: #000;
+
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   inline-size: 100%;
   block-size: 100%;
-  background-color: var(--color-primary);
+  background-color: var(--background-color);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -238,7 +241,7 @@
 }
 
 .button__text {
-  color: var(--color-text-light);
+  color: var(--text-light-color);
   mix-blend-mode: difference;
   position: relative;
 }
@@ -259,7 +262,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--accent-color);
 }
 
 .sparks {
@@ -277,42 +280,42 @@
 }
 
 .like-icon .contour {
-  fill: var(--contour-color); 
+  fill: var(--heart-hover-color); 
   transition: fill 0.1s;
 }
 
 .like-icon:hover .core {
-  fill: var(--core-hover-color);
+  fill: var(--heart-hover-color);
   transition: fill 0.3s;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--main-body-hover-color);
+  fill: var(--heart-hover-color);
   transition: fill 0.3s 0.05s;
 }
 
 .like-icon:active .core {
-  fill: var(--core-active-color);
+  fill: var(--heart-active-color);
   transition: fill 0.3s;
 }
 
 .like-icon:active .main-body {
-  fill: var(--main-body-active-color);
+  fill: var(--heart-active-color);
   transition: fill 0.3s 0.05s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--core-active-color);
+  fill: var(--heart-isliked-color);
   transition: fill 0.3s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--main-body-active-color);
+  fill: var(--heart-isliked-color);
   transition: fill 0.3s 0.05s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--main-body-active-color);
+  fill: var(--heart-isliked-color);
   transition: fill 0.3s 0.06s;
 }
 
@@ -362,7 +365,10 @@
 }
 
 .popup[open]::backdrop {
-  background-color: rgb(0 0 0 / 0.75);
+  --background-color: #000;
+
+  background-color: var(--background-color);
+  opacity: 75%;
 } 
 
 .popup__title {
