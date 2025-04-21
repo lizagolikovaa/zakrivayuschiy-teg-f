@@ -45,7 +45,6 @@
   font-variation-settings: "wght" var(--card-text-weight);
 }
 
-/* Вернуться позднее и проверить как центрировать при помощи clamp */
 .header {
   display: flex;
   flex-direction: column;
@@ -155,7 +154,6 @@
   filter: brightness(150%) contrast(150%);
 }
 
-/* Посмотреть как сделать через hard-light*/
 .image__label {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -168,6 +166,7 @@
     1px 0 var(--color-text-stroke), 
     0 -1px var(--color-text-stroke);
   opacity: 50%;
+  mix-blend-mode: hard-light;
   padding: 25px 25px 0 0;
 }
 
