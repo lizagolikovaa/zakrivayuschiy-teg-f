@@ -1,34 +1,33 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-    --black: #000;
-    --white: #fff;
-    --red: #ff0000;
+  --black: #000;
+  --white: #fff;
+  --red: #ff0000;
 
-    --accent-color: var(--black);
-    --background-color: var(--white);
-    --text-light-color: var(--white);
-    --text-stroke-color: var(--white);
+  --accent-color: var(--black);
+  --background-color: var(--white);
+  --text-light-color: var(--white);
+  --text-stroke-color: var(--white);
 
-    --heart-hover-color: var(--black);
-    --heart-active-color: var(--red);
-    --heart-isliked-color: var(--red);
+  --heart-hover-color: var(--black);
+  --heart-active-color: var(--red);
+  --heart-isliked-color: var(--red);
 
-    --contour-color: var(--black);
-    --animation-fill-color: var(--red);
-    --core-hover-color: var(--black);
-    --main-body-hover-color: var(--black);
-    --core-active-color: var(--red);
-    --main-body-active-color: var(--red);
+  --contour-color: var(--black);
+  --animation-fill-color: var(--red);
+  --core-hover-color: var(--black);
+  --main-body-hover-color: var(--black);
+  --core-active-color: var(--red);
+  --main-body-active-color: var(--red);
 
-    --font-primary: "Inter";
-    --font-accent: "PressStart2P";
-    --font-size-primary: 18px;
-    --font-size-secondary: 14px;
-    --card-text-weight: 400;
-    --card-title-weight: 700;
+  --font-primary: "Inter";
+  --font-accent: "PressStart2P";
+  --font-size-primary: 18px;
+  --font-size-secondary: 14px;
+  --card-text-weight: 400;
+  --card-title-weight: 700;
 
-    --section-width: clamp(375px, 100%, 700px);
-    --image-size: clamp(371px, 100%, 696px);
-
+  --section-width: clamp(375px, 100%, 700px);
+  --image-size: clamp(371px, 100%, 696px);
 }
