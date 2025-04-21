@@ -201,6 +201,7 @@
 .button {
   font-family: var(--font-accent), monospace;
   font-size: var(--font-size-secondary);
+  line-height: 90%;
   border: 2px solid var(--button-border);
   background-color: var(--color-background);
   padding: 0;
@@ -325,7 +326,8 @@
 }
 
 .card__like-button {
-  padding: 10px 37px;
+  inline-size: 130px;
+  block-size: 38px;
 }
 
 .button__save {
@@ -392,5 +394,15 @@
 
   .image__label {
     padding: 25px 13px 0 0;
+  }
+
+  .button__save {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .icon__save {
+    inline-size: 28px;
+    block-size: 28px;
   }
 }
