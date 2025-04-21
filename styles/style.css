@@ -243,16 +243,14 @@
   position: relative;
 }
 
-
 .card__icon-button {
   background: none; 
   border: none;
-  inline-size: 39px;
-  block-size: 36px;
   padding: 0;
-  margin-inline-end: 12px;
+  block-size: 34px;
   outline: 2px solid transparent;
   transition: outline 0.3s ease;
+  margin-inline-end: 12px;
   cursor: pointer;
 }
 
@@ -320,6 +318,7 @@
 
 .like-icon.is-liked .heart {
   animation: heart 0.3s ease-in 0.1s;
+  transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {
@@ -327,9 +326,7 @@
 }
 
 .card__like-button {
-  inline-size: 130px;
-  block-size: 39px;
-  padding: 12.5px 37px;
+  padding: 10px 37px;
 }
 
 .button__save {
