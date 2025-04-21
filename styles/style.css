@@ -141,8 +141,8 @@
 .image {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  inline-size: 100%;
-  block-size: 100%;
+  inline-size: 696px;
+  block-size: 696px;
 }
 
 .image-excitement {
@@ -363,6 +363,7 @@
   min-block-size: 55px;
   padding: 18.5px 21px 18.5px 19px;
   margin-block-start: 50px;
+  margin-block-end: 100px;
 }
 
 .icon__save {
@@ -418,10 +419,15 @@
 }
 
 @media (width <= 375px) {
-  
+
   .section__width {
     inline-size: 100%;
   }
+
+  .image {
+    inline-size: 371px;
+    block-size: 371px;
+  }  
 
   .image__label {
     padding: 25px 13px 0 0;
