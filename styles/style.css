@@ -73,8 +73,8 @@
   justify-content: center;
   font-family: var(--font-accent), monospace;
   border: 2px solid var(--accent-color);
-  min-block-size: 368px;
-  margin-block-start: 102px;
+  padding: clamp(120px, 120px + (128 - 120) * ((100vw - 375px) / (1440 - 375)), 128px) clamp(14px, 14px + (120.5 - 14) * ((100vw - 375px) / (1440 - 375)), 120.5px);
+  margin-block-start: 100px;
 }
 
 .background-light {
