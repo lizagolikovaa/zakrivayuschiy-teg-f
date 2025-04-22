@@ -141,8 +141,8 @@
 .image {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  inline-size: 696px;
-  block-size: 696px;
+  inline-size: clamp(371px, 100%,  696px);
+  block-size: clamp(371px, 100%,  696px);
 }
 
 .image-excitement {
@@ -420,14 +420,14 @@
 
 @media (width <= 375px) {
 
-  .section__width {
+  .section-width {
     inline-size: 100%;
   }
 
   .image {
-    inline-size: 371px;
-    block-size: 371px;
-  }  
+    inline-size: 100%;
+    block-size: 100%;
+  }
 
   .image__label {
     padding: 25px 13px 0 0;
