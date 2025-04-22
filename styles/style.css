@@ -102,6 +102,7 @@
 }
 
 .card__title {
+  grid-column: 1 / 2;
   grid-row: 1 / 2;
   font-size: var(--font-size-primary);
   font-variation-settings: "wght" var(--card-title-weight);
@@ -110,6 +111,7 @@
 }
 
 .card__image {
+  grid-column: 1 / 2;
   grid-row: 2 / 3;
   display: grid;
   border-bottom: 2px solid var(--accent-color);
@@ -181,18 +183,26 @@
 }
 
 .card__text {
-  grid-row: 3 / 4;
   max-inline-size: 100%;
-  padding: 25px;
+  padding: 0 clamp(25px, 25px + (27 - 25) * ((100vw - 375px) / (1440 - 375)), 27px) clamp(25px, 25px + (27 - 25) * ((100vw - 375px) / (1440 - 375)), 27px);
 }
 
-.card__text {
+.card__text:first-of-type {
+  padding-block-start: 27px;
+}
+
+.card__text-description {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.card__text-thoughts {
+  grid-column: 1 / 2;
   grid-row: 4 / 5;
-  max-inline-size: 100%;
-  padding: 0 25px 25px;
 }
 
 .card__button-container {
+  grid-column: 1 / 2;
   grid-row: 5 / 6;
   justify-self: flex-end;
   display: flex;
@@ -208,9 +218,8 @@
   padding: 0;
   box-shadow: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
@@ -319,7 +328,7 @@
   padding-inline-start: 20px;
 }
 
-.popup .icon__save {
+.popup .icon-save {
   grid-column: 1 / 2;
   align-self: center;
   inline-size: 39px;
@@ -346,6 +355,10 @@
 
   .image__label {
     padding: 25px 13px 0 0;
+  }
+
+  .card__text:first-of-type {
+    padding-block-start: 25px;
   }
 
   .button-save {
